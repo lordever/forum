@@ -1,0 +1,96 @@
+.container{
+    width: 1000px;
+    position: absolute;
+    left:50%;
+    margin-left:-500px;
+}
+
+.container h2{
+    font-family: 'Open Sans', 'sans-serif';
+    text-align:center;
+}
+
+/* Таблица */
+.container table{
+    border-spacing: 0 10px;
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight:bold;
+    width: 100%;
+}
+
+.container table td{
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+    text-align:center;
+    border-top: 2px solid #56433D;
+    border-bottom: 2px solid #56433D;
+    border-right: 2px solid #56433D;
+}
+
+.container table td a{
+    text-decoration: none;
+    color:black;
+}
+
+.container table td:first-child{
+    border-left: 2px solid #56433D;
+}
+
+/* Ссылки-кнопки */
+.links{
+    text-align: center;
+    padding-top:10px;
+}
+
+.links a {
+    border-radius:20px 20px;
+    padding:5px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Форма */
+
+form {
+    width:100%;
+    margin:auto;
+    position:absolute;
+    left:50%;
+    margin-left:-500px;
+    text-align:center;
+}
+
+input{
+    width:300px;
+    font-size:13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background:#F6F6F6;
+    border-radius: 6px;
+}
+
+.links input[type="submit"] {
+    cursor:pointer;
+    width:120px;
+    border-radius:20px 20px;
+    border:1px solid black;
+    padding:5px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+    height:50px;
+    width: 300px;
+    background: #f6f6f6;
+    border: 1px solid #cecece;
+    border-radius: 8px 0 0 0;
+    padding:8px 0 8px 10px;
+}
