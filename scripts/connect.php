@@ -6,7 +6,7 @@
             $this->db_connect = mysqli_connect('localhost', 'root', '', 'forum');
             // Check connection
             if ($this->db_connect === false) {
-                die("ERROR: Could not connect to ".$this->db_name);
+                die("ERROR: Could not connect to forum");
             }
         }
 
