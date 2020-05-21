@@ -33,7 +33,7 @@ $topics = $forum_connection->select("topics");
                     <?php echo $topic['id_topic']; ?>
                 </td>
                 <td>
-                    <a href="posts.php?<?php echo 'id_topic=' . $topic['id_topic'] . '&id_author=' . $topic['id_topic']; ?>">
+                    <a href="posts.php?<?php echo 'id_topic=' . $topic['id_topic'] . '&id_author=' . $topic['id_author']; ?>">
                         <?php echo $topic['topic_name']; ?>
                     </a>
                 </td>

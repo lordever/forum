@@ -9,20 +9,17 @@
 </head>
 <body>
     <div class="container">
-        <h2>Новый пользователь</h2>
+        <h2>Новая тема</h2>
 
-       <form action="./scripts/newUser.service.php" method="post">
+       <form action="./scripts/newTopic.service.php" method="post">
         <p>
-            <input type="text" name="name" placeholder="name" required />
+            <input type="text" name="topic_name" placeholder="topic_name" required />
         </p>
         <p>
-            <input type="text" name="email" placeholder="email" required />
-        </p>   
-        <p>
-            <input type="password" name="password" placeholder="password" required />
-        </p>      
+            <input type="text" name="id_author" placeholder="id_author" required />
+        </p>     
         <div class="links">
-            <a href="index.php">К списку пользователей</a>
+            <a href="topics.php">К списку тем</a>
             <input type="submit" value="Создать" />
         </div>
        </form>

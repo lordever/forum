@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./styles/style.css" />
 </head>
 <body>
+<?php
+require_once("./scripts/connect.php");
+$forum_connection = new Forum_Connect;
+$users = $forum_connection->select("users");
+?>
     <div class="container">
         <h2>Пользователи</h2>
 
@@ -21,36 +26,18 @@
                 </tr>
             </thead>
             <tbody>
+            <?php
+            foreach($users as $user) {
+                ?>
                 <tr>
-                    <td>125</td>
-                    <td>Alexey</td>
-                    <td>alex@mail.com</td>
-                    <td>Query123123</td>
+                    <td><?php echo $user["id_user"] ?></td>
+                    <td><?php echo $user["name"] ?></td>
+                    <td><?php echo $user["email"] ?></td>
+                    <td><?php echo $user["password"] ?></td>
                 </tr>
-                <tr>
-                    <td>151</td>
-                    <td>Natalia</td>
-                    <td>natalia@mail.com</td>
-                    <td>Query123236</td>
-                </tr>
-                <tr>
-                    <td>131</td>
-                    <td>Margarita</td>
-                    <td>margartia@mail.com</td>
-                    <td>Query12312123</td>
-                </tr>
-                <tr>
-                    <td>175</td>
-                    <td>Jack</td>
-                    <td>jack@mail.com</td>
-                    <td>Query12313265234</td>
-                </tr>
-                <tr>
-                    <td>167</td>
-                    <td>Mick</td>
-                    <td>mick@mail.com</td>
-                    <td>Query123125123</td>
-                </tr>
+                <?php
+            }
+            ?>
             </tbody>
         </table>
         <div class="links">
