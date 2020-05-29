@@ -19,8 +19,10 @@
             }
 
             $result = $this->db_connect->query($sql_query);
-            while($row = mysqli_fetch_assoc($result)){
-                $array[] = $row;
+            if($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $array[] = $row;
+                }
             }
             return $array;
         }
@@ -29,6 +31,19 @@
             $rows = $this->get_insert_string_row($insert_rows);
             $values = $this->get_insert_string_value($insert_values);
             $sql_query = "INSERT INTO `".$table_name."` (".$rows.") VALUES (".$values.")";
+            $this->db_connect->query($sql_query);
+            return 1;
+        }
+
+        public function update($table_name, $new_message, $id_name, $id){
+            $sql_query = "UPDATE `".$table_name."` SET `message` = '".$new_message."' WHERE `".$id_name."`=".$id."";
+            $this->db_connect->query($sql_query);
+            return 1;
+        }
+
+        public function remove($table_name, $id_name, $id){
+            $sql_query = "DELETE FROM `".$table_name."` WHERE `".$id_name."` = ".$id;
+            echo $sql_query;
             $this->db_connect->query($sql_query);
             return 1;
         }

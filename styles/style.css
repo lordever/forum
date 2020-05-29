@@ -52,6 +52,26 @@
     text-transform: uppercase;
 }
 
+.edit-btn {
+    background-color: darkorange;
+    border-radius:20px 20px;
+    padding:5px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.remove-btn{
+    cursor:pointer;
+    width:90px;
+    border-radius:20px 20px;
+    border:1px solid black;
+    padding:5px;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 /* Форма */
 
 form {
